@@ -1,7 +1,7 @@
 $(document).ready(function(){
   
-
   $('#login').click(function(e){
+
     e.preventDefault();
 
     var username = $('#username').val();
@@ -22,9 +22,30 @@ $(document).ready(function(){
       console.log("Password and confirm password did not match.");
     } else{
       console.log("Login successfully.");
-      // $.ajax({
 
-      // })
+      if(username !== "" || email !== '' || password !== '' || c_password !== ''){
+        $.ajax({
+          url: "./controller/loginHandler.php",
+          type: 'POST',
+          data: {
+            adminlogin: true,
+            username: username,
+            email: email,
+            password: password,
+            c_password: c_password
+          },
+          success: function(res){
+            console.log(res);
+            // window.location.href = "http://localhost/mvc_login/view/login/dashboard.php";
+          },
+          error: function(err){
+            console.log(err);
+          }
+        })
+      }
+      
+      
+
     }
     
   })

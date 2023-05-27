@@ -15,9 +15,9 @@ class login{
     }
   }
 
-  public function loginAccount($username, $password, $c_password){
+  public function loginAccount($username, $email, $password, $c_password){
     try{
-      $query = "SELECT * FROM admin WHERE username = $username AND password = $password AND c_password = $c_password";
+      $query = "SELECT * FROM admin WHERE username = $username AND email = $email AND password = $password AND c_password = $c_password";
       $statement = $this->login->prepare($query);
       $statement->execute();
       $dataLogin = $statement->fetch(PDO::FETCH_ASSOC);

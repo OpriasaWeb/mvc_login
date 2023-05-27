@@ -17,8 +17,8 @@ class loginController{
     include(APPROOT."/view/login/dashboard.php");
   }
 
-  public function loginAccount($username, $password, $c_password){
-    $loginAdminAccount = $this->adminLogin->loginAccount($username, $password, $c_password);
+  public function loginAccount($username, $email, $password, $c_password){
+    $loginAdminAccount = $this->adminLogin->loginAccount($username, $email, $password, $c_password);
     return $loginAdminAccount;
   }
 

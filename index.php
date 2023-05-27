@@ -1,7 +1,11 @@
 <?php
 
 // ROUTER
-define('APPROOT', dirname(__FILE__));
+define("APPROOT", dirname(__FILE__));
+define("APPBASEURL", "localhost/mvc_project/");
+
+// Include the file after defining the constant
+
 
 if(empty($_REQUEST['module'])){
   die("<h1>Module not specified, please check the url.</h1>");

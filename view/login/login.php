@@ -1,6 +1,12 @@
 <?php
- echo "This is login page";
+//  echo "This is login page\n";
 
+// echo APPROOT."/controller/loginController.php";
+// echo APPROOT."/config/config.php";
+// include(APPROOT."/config/config.php");
+// include(APPROOT."controller/loginController.php");
+
+//  echo md5('admin');
 ?>
 
 <?php
@@ -39,6 +45,8 @@
   <?php
     include(APPROOT."/assets/script.js");
   ?>
+  
+  // header('../../controller/loginHandler.php');
 
 </script>
 

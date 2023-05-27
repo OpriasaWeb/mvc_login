@@ -1,10 +1,11 @@
 <?php
 
-include(APPROOT."/controller/loginController.php");
+
+include 'loginController.php';
 
 $loginHandler = new loginController();
 
-if(isset($_POST['login'])){
+if(isset($_POST['adminlogin'])){
   
   try{
     
@@ -22,7 +23,7 @@ if(isset($_POST['login'])){
       print_r($_POST);
 
       // From controller
-      $loginAdmit = $loginHandler->loginAccount($username, $password, $c_password);
+      $loginAdmit = $loginHandler->loginAccount($username, $email, $password, $c_password);
 
       echo json_encode($loginAdmit);
 
